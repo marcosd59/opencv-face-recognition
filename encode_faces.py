@@ -1,11 +1,12 @@
-# encode_faces.py
+# # encode_faces.py
 
 import face_recognition
+import cv2
 import pickle
 import os
 
 # Ruta al directorio del dataset de caras
-dataset_path = './fotos'
+dataset_path = './personas_que_conozco/'
 # Archivo para guardar las codificaciones
 encoding_file = 'encodings.pickle'
 # Método de detección (hog o cnn)
@@ -44,4 +45,4 @@ for label in os.listdir(dataset_path):
 with open(encoding_file, 'wb') as f:
     f.write(pickle.dumps({'encodings': knownEncodings, 'names': knownNames}))
 
-print("Codificaciones de rostros guardadas en", encoding_file)
+print("Codificaciones de rostros guardadas en", encoding_file, knownNames, knownEncodings)
