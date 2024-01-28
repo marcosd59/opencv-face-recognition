@@ -1,45 +1,57 @@
-# Reconocimiento Facial con OpenCV y Python
+# OpenCV-Face-Recognition
 
-## Descripción
-Este proyecto implementa un sistema de reconocimiento facial utilizando OpenCV, Python y aprendizaje profundo. El sistema puede identificar rostros en imágenes y videos en tiempo real. Se basa en el uso de la biblioteca `face_recognition` junto con OpenCV para el procesamiento de imágenes y el manejo de videos.
+Este repositorio contiene un proyecto de reconocimiento facial utilizando OpenCV, Python y técnicas de Deep Learning. El proyecto incluye scripts para codificar rostros desde un dataset de imágenes conocidas, y luego usar estas codificaciones para reconocer rostros en nuevas imágenes y videos.
 
-## Características
-- Reconocimiento facial en imágenes estáticas.
-- Reconocimiento facial en video en tiempo real.
-- Uso de codificaciones faciales y algoritmos de aprendizaje profundo.
+## Estructura del Proyecto
 
-## Requisitos Previos
-- Python 3.x
+El proyecto incluye los siguientes archivos y carpetas:
+
+- `encode_faces.py`: Script para generar codificaciones de rostros a partir de un conjunto de imágenes conocidas.
+- `recognize_faces_image.py`: Script para reconocer rostros en imágenes estáticas.
+- `recognize_faces_video.py`: Script para reconocer rostros en videos en tiempo real.
+- `known_people/`: Directorio que contiene subdirectorios con imágenes de personas conocidas. Cada subdirectorio debe tener el nombre de la persona.
+- `unknown_pictures/`: Directorio que contiene imágenes para probar el reconocimiento facial.
+- `encodings.pickle`: Archivo generado que almacena las codificaciones de rostros.
+
+## Instalación
+
+Para ejecutar los scripts, necesitas tener instalado Python y las siguientes bibliotecas:
+
 - OpenCV
 - dlib
 - face_recognition
-- imutils
+- imutils (opcional)
 
-## Instalación
-Para instalar las dependencias necesarias, ejecute el siguiente comando:
+Puedes instalar estas dependencias con:
 
 ```bash
 pip install opencv-python dlib face_recognition imutils
 ```
 
-## Estructura del Proyecto
-- `encode_faces.py`: Script para generar codificaciones de rostros a partir de un dataset de imágenes.
-- `recognize_faces_image.py`: Script para reconocer rostros en imágenes estáticas.
-- `recognize_faces_video.py`: Script para reconocer rostros en video en tiempo real.
-- `dataset/`: Directorio para almacenar el dataset de rostros.
-- `models/`: Directorio para almacenar modelos entrenados y codificaciones.
-- `README.md`: Este archivo.
-
 ## Uso
-1. **Codificación de Rostros**:
-   - Coloque las imágenes en el directorio `dataset/`.
-   - Ejecute `python encode_faces.py`.
 
-2. **Reconocimiento en Imágenes**:
-   - Ejecute `python recognize_faces_image.py --image path/to/image.jpg`.
+### Generar codificaciones de rostros
 
-3. **Reconocimiento en Video**:
-   - Ejecute `python recognize_faces_video.py`.
+Primero, debes generar las codificaciones de rostros a partir de tu conjunto de imágenes conocidas:
 
-## Autores
-- Marcos Damián Pool Canul
+```bash
+python encode_faces.py
+```
+
+Este script procesará las imágenes en `known_people/` y creará `encodings.pickle`.
+
+### Reconocimiento facial en imágenes
+
+Para reconocer rostros en imágenes estáticas, usa:
+
+```bash
+python recognize_faces_image.py
+```
+
+### Reconocimiento facial en videos
+
+Para reconocer rostros en tiempo real a través de una cámara web, usa:
+
+```bash
+python recognize_faces_video.py
+```
