@@ -1,4 +1,4 @@
-# Proyecto de Reconocimiento Facial con OpenCV y Python
+# Reconocimiento Facial con OpenCV y Python
 
 ## Descripción
 Este proyecto implementa un sistema de reconocimiento facial utilizando OpenCV, Python y aprendizaje profundo. El sistema puede identificar rostros en imágenes y videos en tiempo real. Se basa en el uso de la biblioteca `face_recognition` junto con OpenCV para el procesamiento de imágenes y el manejo de videos.
