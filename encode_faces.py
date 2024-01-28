@@ -1,4 +1,4 @@
-# # encode_faces.py
+# encode_faces.py
 
 import face_recognition
 import cv2
@@ -6,7 +6,7 @@ import pickle
 import os
 
 # Ruta al directorio del dataset de caras
-dataset_path = './personas_que_conozco/'
+dataset_path = './known_people/'
 # Archivo para guardar las codificaciones
 encoding_file = 'encodings.pickle'
 # Método de detección (hog o cnn)
