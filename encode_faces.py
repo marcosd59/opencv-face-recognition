@@ -45,4 +45,4 @@ for label in os.listdir(dataset_path):
 with open(encoding_file, 'wb') as f:
     f.write(pickle.dumps({'encodings': knownEncodings, 'names': knownNames}))
 
-print("Codificaciones de rostros guardadas en", encoding_file, knownNames, knownEncodings)
+print("Codificaciones de rostros guardadas en", encoding_file, knownNames)
