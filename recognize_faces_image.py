@@ -10,7 +10,7 @@ with open('encodings.pickle', 'rb') as f:
     data = pickle.load(f)
 
 # Cargar imagen y convertirla de BGR a RGB
-image = cv2.imread('./personas_que_conozco/0.png')
+image = cv2.imread('./personas_que_desconozco/desconocido.png')
 rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 # Detectar rostros en la imagen
