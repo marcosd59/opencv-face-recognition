@@ -47,7 +47,6 @@ while True:
         y = top - 15 if top - 15 > 15 else top + 15
         cv2.putText(frame, name, (left, y),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2)
-
     cv2.imshow('Video', frame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
