@@ -1,8 +1,8 @@
-# OpenCV-Face-Recognition
+# Face Recognition with OpenCV, Python, and Deep Learning
 
-Este repositorio contiene un proyecto de reconocimiento facial utilizando OpenCV, Python y técnicas de Deep Learning. El proyecto incluye scripts para codificar rostros desde un dataset de imágenes conocidas, y luego usar estas codificaciones para reconocer rostros en nuevas imágenes y videos.
+Este es un proyecto de reconocimiento facial utilizando OpenCV, Python y técnicas de Deep Learning. El proyecto incluye scripts para codificar rostros desde un dataset de imágenes conocidas, y luego usar estas codificaciones para reconocer rostros en nuevas imágenes y videos.
 
-## Estructura del Proyecto
+## Estructura del proyecto
 
 El proyecto incluye los siguientes archivos y carpetas:
 
@@ -19,13 +19,15 @@ Para ejecutar los scripts, necesitas tener instalado Python y las siguientes bib
 
 - OpenCV
 - dlib
+- cv2
+- pickle
 - face_recognition
 - imutils (opcional)
 
 Puedes instalar estas dependencias con:
 
 ```bash
-pip install opencv-python dlib face_recognition imutils
+pip install opencv-python dlib face_recognition imutils cv2 pickle
 ```
 
 ## Uso
@@ -54,4 +56,8 @@ Para reconocer rostros en tiempo real a través de una cámara web, usa:
 
 ```bash
 python recognize_faces_video.py
+```
+
+```bash
+python recognize_faces_video_camera.py
 ```
